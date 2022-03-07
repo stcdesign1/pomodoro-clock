@@ -1,0 +1,14 @@
+{
+  "name": "pomodoro-clock",
+  "version": "1.0.0",
+  "description": "freecodecamp front end library project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass/style.scss css/style.css"
+  },
+  "author": "Dragan Stipanović",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

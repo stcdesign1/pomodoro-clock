@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  height: 100vh; }
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) [content-start] minmax(5rem, 45rem) [content-end] minmax(2rem, 1fr);
+  grid-template-rows: 25rem 25rem 10rem; }
+  @media only screen and (max-width: 485px) {
+    .container {
+      grid-template-rows: 15rem 25rem 10rem; } }
+
+.top-bg {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  background-color: #EFFCEF;
+  height: 54rem; }
+  @media only screen and (max-width: 485px) {
+    .top-bg {
+      height: 44.5rem; } }
+
+.progress-bar {
+  grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+  background-color: #8FE8B0;
+  border-radius: 10rem;
+  margin-top: 3.4rem;
+  height: .6rem;
+  width: 10rem; }
+  @media only screen and (max-width: 950px) {
+    .progress-bar {
+      display: none; } }
+
+.rock-illustration {
+  grid-row: 2 / 3;
+  grid-column: 1 / span 1;
+  align-self: end;
+  justify-self: end;
+  margin-right: 9rem; }
+  @media only screen and (max-width: 950px) {
+    .rock-illustration {
+      display: none; } }
+
+.countdown {
+  grid-column: content-start / content-end;
+  grid-row: 1 / span 2;
+  display: grid;
+  justify-items: center;
+  align-items: center; }
+
+.stopwatch-illustration {
+  grid-row: 1 / -1;
+  align-self: end; }
+  @media only screen and (max-width: 485px) {
+    .stopwatch-illustration {
+      width: 12rem; } }
+
+.time {
+  display: flex;
+  justify-content: space-between; }
+  .time-seconds-js {
+    z-index: 1; }
+
+.time-block {
+  width: 9rem;
+  height: 13rem;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(204, 237, 210, 0.56);
+  border-radius: .6rem;
+  font-size: 10rem;
+  color: #94D3AC;
+  line-height: 1;
+  text-align: center; }
+  .time-block span {
+    display: inline-block;
+    margin-top: 1rem; }
+    @media only screen and (max-width: 485px) {
+      .time-block span {
+        margin-top: 0; } }
+  .time-block--colon {
+    color: #817974;
+    font-size: 10rem;
+    padding: 0 1rem; }
+    @media only screen and (max-width: 485px) {
+      .time-block--colon {
+        font-size: 7rem;
+        margin-top: -1.2rem; } }
+  .time-block:nth-child(1) {
+    margin-right: 1.4rem; }
+  .time-block:nth-child(4) {
+    margin-right: 1.4rem; }
+  @media only screen and (max-width: 485px) {
+    .time-block {
+      width: 6rem;
+      height: 8rem;
+      font-size: 7rem;
+      padding: 2px 11px; } }
+
+.settings {
+  grid-column: content-start / content-end;
+  grid-row: 3 / span 1;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr .6rem 1fr;
+  background-color: #E5E3E2;
+  width: 98%;
+  height: 8rem;
+  border-radius: .4rem;
+  box-shadow: 0 3px 7px rgba(157, 151, 147, 0.46); }
+  .settings__block {
+    display: grid;
+    margin: 1.6rem 3rem; }
+    @media only screen and (max-width: 390px) {
+      .settings__block {
+        margin: 1.6rem 2rem; } }
+    .settings__block > p {
+      color: #817974;
+      font-size: 1.2rem;
+      letter-spacing: .075rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase; }
+  .settings__time {
+    display: flex; }
+    .settings__time > h3 {
+      color: #655C56;
+      font-size: 2.2rem; }
+  .settings__separator {
+    background-color: #D5D2D0; }
+
+.change-length {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.2rem;
+  margin-top: .4rem; }
+  .change-length--up {
+    margin-bottom: .5rem; }
+  .change-length img {
+    cursor: pointer; }
+
+.buttons {
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; }
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .6rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  height: 4.8rem;
+  width: 11.5rem; }
+  .button svg {
+    margin-right: .7rem; }
+    .button svg:active {
+      fill: white; }
+  .button__start-stop {
+    background-color: #8FE8B0;
+    color: #4D4642;
+    margin-right: 1rem; }
+    .button__start-stop:hover {
+      background-color: #ADEEC5; }
+    .button__start-stop:active {
+      background-color: #8FE8B0; }
+    .button__start-stop svg {
+      fill: #4D4642; }
+  .button__reset {
+    background-color: #817974;
+    color: #E3E1E0;
+    font-weight: 500; }
+    .button__reset:hover {
+      background-color: #97918D; }
+    .button__reset:active {
+      background-color: #817974; }
